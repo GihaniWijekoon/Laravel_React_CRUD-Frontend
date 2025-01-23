@@ -18,13 +18,18 @@ const ProductForm = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   const isEditMode = !!id;
-
-  const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm({
+  
+  const { 
+    register, 
+    handleSubmit, 
+    reset, 
+    setValue, 
+    formState: { errors } 
+  } = useForm({
     resolver: yupResolver(productSchema)
   });
 
   useEffect(() => {
-    // Fetch categories
     const fetchCategories = async () => {
       try {
         const response = await axios.get('http://127.0.0.1:8000/api/v1/categories');
@@ -34,7 +39,6 @@ const ProductForm = () => {
       }
     };
 
-    // Fetch product details for edit mode
     const fetchProduct = async () => {
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/v1/products/${id}`);
@@ -68,23 +72,23 @@ const ProductForm = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <h2>{isEditMode ? 'Edit Product' : 'Add New Product'}</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label>Name</label>
           <input {...register('name')} />
-          {errors.name && <p>{errors.name.message}</p>}
+          {errors.name && <p className="error-message">{errors.name.message}</p>}
         </div>
         <div>
           <label>Price</label>
-          <input type="number" {...register('price')} />
-          {errors.price && <p>{errors.price.message}</p>}
+          <input  {...register('price')} />
+          {errors.price && <p className="error-message">{errors.price.message}</p>}
         </div>
         <div>
           <label>Description</label>
           <textarea {...register('description')}></textarea>
-          {errors.description && <p>{errors.description.message}</p>}
+          {errors.description && <p className="error-message">{errors.description.message}</p>}
         </div>
         <div>
           <label>Category</label>
@@ -95,7 +99,7 @@ const ProductForm = () => {
               </option>
             ))}
           </select>
-          {errors.category_id && <p>{errors.category_id.message}</p>}
+          {errors.category_id && <p className="error-message">{errors.category_id.message}</p>}
         </div>
         <button type="submit">
           {isEditMode ? 'Update Product' : 'Create Product'}

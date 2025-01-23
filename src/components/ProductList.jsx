@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './ProductList.css';
 
-
 const ProductList = () => {
   const [products, setProducts] = useState([]);
 
@@ -30,9 +29,13 @@ const ProductList = () => {
   };
 
   return (
-    <div>
+<>
+    <div className='title'>
+      <h1>Laravel and React CRUD</h1>
+    </div>
+    <div className="container">
       <h2>Product List</h2>
-      <Link to="/products/new">Add New Product</Link>
+      <Link to="/products/new" className="add-product">Add New Product</Link>
       <table>
         <thead>
           <tr>
@@ -50,15 +53,26 @@ const ProductList = () => {
               <td>${product.price}</td>
               <td>{product.description}</td>
               <td>{product.category.name}</td>
-              <td>
-                <Link to={`/products/edit/${product.id}`}>Edit</Link>
-                <button onClick={() => handleDelete(product.id)}>Delete</button>
+              <td className="action-buttons">
+                <Link 
+                  to={`/products/edit/${product.id}`} 
+                  className="edit-btn"
+                >
+                  Edit
+                </Link>
+                <button 
+                  onClick={() => handleDelete(product.id)} 
+                  className="delete-btn"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
+    </>
   );
 };
 
