@@ -1,0 +1,115 @@
+/* ProductList.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FBFBFB; /* Light gray background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container for the entire product list */
+.container {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #16404D; /* Dark blue */
+    margin-bottom: 20px;
+}
+
+/* Link to add new product */
+a {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background-color: #16404D; /* Dark blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+a:hover {
+    background-color: #14333A; /* Darker blue */
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: left;
+}
+
+thead {
+    background-color: #16404D; /* Dark blue */
+    color: #fff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+tr:hover {
+    background-color: #f1f1f1; /* Lighter gray for hover effect */
+}
+
+/* Action buttons */
+button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #D2665A; /* Delete button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C25247; /* Darker red for hover effect */
+}
+
+/* Edit link */
+.action-links a {
+    color: #889E73; /* Edit button color */
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    a, button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
