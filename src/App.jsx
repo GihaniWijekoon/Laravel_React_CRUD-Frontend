@@ -1,7 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import ProductList from './components/ProductList';
-import ProductForm from './components/ProductForm';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import ProductList from "./components/ProductList";
+import ProductForm from "./components/ProductForm";
 
 function App() {
   return (

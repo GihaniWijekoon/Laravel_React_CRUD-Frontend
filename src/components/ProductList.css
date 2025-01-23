@@ -1,73 +1,75 @@
 h2 {
-    font-size: 2rem;
-    color: #16404D;
-    margin-bottom: 20px;
+  font-size: 2rem;
+  color: #16404d;
+  margin-bottom: 20px;
 }
 
-.container { 
-    max-width: 90vw;
-    margin-left: 5vw;
-  }
+.container {
+  max-width: 90vw;
+  margin-left: 5vw;
+}
 
 a.add-product {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 15px;
-    background-color: #77B254;
-    color: white;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #77b254;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
 }
 
 a.add-product:hover {
-    background-color: #5B913B;
+  background-color: #5b913b;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 thead {
-    background-color: #E2F1E7;
+  background-color: #e2f1e7;
 }
 
-th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
-    text-align: center;
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
 }
 
 .action-buttons {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
-.edit-btn, .delete-btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    color: white;
-    text-decoration: none;
-    width: 70px;
-    text-align: center;
+.edit-btn,
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  width: 70px;
+  text-align: center;
 }
 
 .edit-btn {
-    background-color: #50688a;
+  background-color: #50688a;
 }
 
 .edit-btn:hover {
-    background-color: #465b79;
+  background-color: #465b79;
 }
 
 .delete-btn {
-    background-color: #c54444;
+  background-color: #c54444;
 }
 
 .delete-btn:hover {
-    background-color: #993535;
+  background-color: #993535;
 }
