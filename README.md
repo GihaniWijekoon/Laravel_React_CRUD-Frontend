@@ -4,9 +4,9 @@ This React frontend provides a user interface for managing the CRUD operations p
 
 ## Requirements
 
-○ Node.js >= 14
+- Node.js >= 14
 
-○ npm or yarn
+- npm or yarn
 
 ## Setup Instructions
 
@@ -37,12 +37,12 @@ The frontend will be available at http://localhost:3000.
 
 ### CRUD Operations:
 
-Add, edit, delete, and list products.
+- Add, edit, delete, and list products.
 
 ### Category Management:
 
-View products by category.
+- View products by category.
 
 ### API Integration:
 
-All features are integrated with the Laravel backend.
+- All features are integrated with the Laravel backend.
